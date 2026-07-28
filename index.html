@@ -8,12 +8,10 @@
     <meta name="description" content="Landing Page Premium para pequenos comércios.">
     <meta name="author" content="Mesquita SAAS">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/components.css">
@@ -24,7 +22,6 @@
 
 <body>
 
-    <!-- HEADER -->
     <header id="header">
         <div class="container">
             <a href="#" class="logo" id="logo"></a>
@@ -33,11 +30,10 @@
     </header>
 
     <main>
-        <!-- HERO -->
         <section id="hero">
             <div id="hero-container"></div>
         </section>
-<!-- PROMOÇÕES -->
+
         <section id="promocoes" style="padding: 60px 20px; background-color: #fff9f9;">
             <div class="container" style="max-width: 1200px; margin: 0 auto;">
                 <div style="text-align: center; margin-bottom: 40px;">
@@ -67,26 +63,21 @@
             </div>
         </section>
 
-        <!-- CARDÁPIO -->
         <section id="products" style="padding: 30px 20px 60px 20px;">
             <div class="container">
-                <h2 class="section-title" style="margin-top: 10; padding-top: 0;">Nosso Cardápio</h2>
+                <h2 class="section-title" style="margin-top: 10px; padding-top: 0;">Nosso Cardápio</h2>
                 
-                <!-- PESQUISA -->
                 <div class="search-box">
                     <input type="text" id="search-product" placeholder="🔍 Pesquise uma pizza ou ingrediente...">
                     <span id="contador-produtos" style="display: block; margin-top: 5px; font-size: 0.9rem; color: #666;"></span>
                 </div>
 
-                <!-- FILTROS -->
                 <div id="products-filters"></div>
             </div>
 
-            <!-- GRID -->
             <div id="products-container"></div>
         </section>
 
-        <!-- CONTATO -->
         <section id="contato" style="padding: 60px 20px; background-color: #f9fafb;">
             <div class="container" style="max-width: 1200px; margin: 0 auto;">
                 <div style="text-align: center; margin-bottom: 40px;">
@@ -96,7 +87,6 @@
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; align-items: start;">
                     
-                    <!-- Coluna 1: Endereço e Mapa -->
                     <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
                         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
                             <span style="font-size: 1.5rem; color: #EE3947;">📍</span>
@@ -105,22 +95,20 @@
                         <p style="color: #6B7280; font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px;">
                             Rua das Pizzas, 123 - Centro<br>Sua Cidade / SP
                         </p>
-                        <!-- Mapa incorporado do Google Maps -->
                         <div style="width: 100%; height: 200px; border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb;">
                             <iframe width="100%" height="100%" style="border:0;" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.5!2d-45.9!3d-21.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDI0JzAwLjAiUyA0NcKwNTQnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000"></iframe>
                         </div>
                     </div>
 
-                    <!-- Coluna 2: Horários e Status (Aberto/Fechado) -->
                     <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
                             <div style="display: flex; align-items: center; gap: 10px;">
                                 <span style="font-size: 1.5rem; color: #EE3947;">⏰</span>
                                 <h3 style="font-size: 1.2rem; color: #1F2937; margin: 0;">Horário de Funcionamento</h3>
                             </div>
-                            <!-- Indicador estilo Google (Aberto/Fechado) -->
-                            <span id="status-funcionamento" style="background-color: #dcfce7; color: #15803d; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">
-                                <span style="width: 8px; height: 8px; background-color: #22c55e; border-radius: 50%; display: inline-block;"></span> Aberto agora
+                            <span id="status-funcionamento" style="background-color: #fee2e2; color: #b91c1c; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">
+                                <span id="status-bolinha" style="width: 8px; height: 8px; background-color: #ef4444; border-radius: 50%; display: inline-block;"></span>
+                                <span id="status-texto">Fechado agora</span>
                             </span>
                         </div>
                         <ul style="color: #6B7280; font-size: 0.95rem; line-height: 1.8; padding-left: 20px; margin: 0;">
@@ -131,7 +119,6 @@
                         </ul>
                     </div>
 
-                    <!-- Coluna 3: Atendimento WhatsApp -->
                     <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); text-align: center; display: flex; flex-direction: column; justify-content: center; height: 100%;">
                         <div style="font-size: 2.5rem; color: #22C55E; margin-bottom: 10px;">💬</div>
                         <h3 style="font-size: 1.2rem; color: #1F2937; margin-bottom: 10px;">Atendimento Direto</h3>
@@ -144,37 +131,82 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer id="footer">
         <div class="container">
-            <p>&copy; 2026 Bella Pizza - Todos os direitos reservados.</p>
+            <p>© 2026 Bella Pizza - Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- MODAL DE PEDIDO -->
     <div id="modal-pedido" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; justify-content: center; align-items: center;">
         <div style="background: white; width: 100%; max-width: 500px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.3); position: relative; max-height: 90vh; display: flex; flex-direction: column;">
             
-            <!-- CABEÇALHO DO MODAL -->
             <div style="padding: 15px 20px; background: #EE3947; color: white; display: flex; justify-content: space-between; align-items: center;">
                 <h3 style="margin: 0; font-size: 1.2rem;">Monte o seu pedido</h3>
-                <button id="fechar-modal" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; font-weight: bold;">&times;</button>
+                <button id="fechar-modal" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; font-weight: bold;">×</button>
             </div>
 
-            <!-- CONTEÚDO DINÂMICO (Preenchido pelo JS) -->
             <div id="modal-corpo-conteudo" style="padding: 20px; overflow-y: auto; flex: 1;">
-                <!-- O formulário de montagem entra aqui -->
-            </div>
+                </div>
 
         </div>
     </div>
 
-    <!-- JavaScript -->
     <script src="js/config.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/render.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/app.js"></script>
+
+    <script>
+        function atualizarStatusPizzaria() {
+            const agora = new Date();
+            const diaSemana = agora.getDay(); // 0 = Domingo, 1 = Segunda, 2 = Terça...
+            const minutoAtual = (agora.getHours() * 60) + agora.getMinutes();
+
+            let estaAberto = false;
+
+            // Horários em minutos
+            const min18h = 18 * 60;        // 1080 min
+            const min23h = 23 * 60;        // 1380 min
+            const min23h30 = (23 * 60) + 30; // 1410 min
+            const min24h = 24 * 60;        // 1440 min
+
+            if (diaSemana >= 2 && diaSemana <= 4) {
+                // Terça a Quinta: 18:00 às 23:00
+                estaAberto = (minutoAtual >= min18h && minutoAtual < min23h);
+            } else if (diaSemana === 5 || diaSemana === 6) {
+                // Sexta e Sábado: 18:00 às 00:00
+                estaAberto = (minutoAtual >= min18h && minutoAtual < min24h);
+            } else if (diaSemana === 0) {
+                // Domingo: 18:00 às 23:30
+                estaAberto = (minutoAtual >= min18h && minutoAtual < min23h30);
+            } else {
+                // Segunda-feira: Fechado
+                estaAberto = false;
+            }
+
+            const elBadge = document.getElementById('status-funcionamento');
+            const elBolinha = document.getElementById('status-bolinha');
+            const elTexto = document.getElementById('status-texto');
+
+            if (elBadge && elBolinha && elTexto) {
+                if (estaAberto) {
+                    elBadge.style.backgroundColor = '#dcfce7';
+                    elBadge.style.color = '#15803d';
+                    elBolinha.style.backgroundColor = '#22c55e';
+                    elTexto.textContent = 'Aberto agora';
+                } else {
+                    elBadge.style.backgroundColor = '#fee2e2';
+                    elBadge.style.color = '#b91c1c';
+                    elBolinha.style.backgroundColor = '#ef4444';
+                    elTexto.textContent = 'Fechado agora';
+                }
+            }
+        }
+
+        // Executa ao carregar a página
+        document.addEventListener('DOMContentLoaded', atualizarStatusPizzaria);
+    </script>
 
 </body>
 </html>
