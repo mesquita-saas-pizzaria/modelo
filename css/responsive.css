@@ -1,0 +1,69 @@
+/* AJUSTES PARA CELULAR (Telas menores que 768px) */
+@media (max-width: 768px) {
+    /* Alinha o cabeçalho e distribui os itens */
+    #header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    /* Centraliza a logo e impede a quebra do texto */
+    .logo {
+        text-align: center;
+        white-space: nowrap; /* Evita que o nome 'Bella Pizza' quebre para a linha de baixo */
+        font-size: 1.4rem;
+        margin: 0 auto;
+    }
+
+    /* Estilo do Menu Hambúrguer (3 traços) */
+    .menu-toggle, #menu-btn {
+        display: block;
+        cursor: pointer;
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        color: #1F2937;
+        padding: 5px;
+    }
+}
+
+/* Ajustes para telas menores (Celulares) */
+@media (max-width: 768px) {
+    /* Exibe o botão hambúrguer */
+    #menu-btn {
+        display: block !important;
+    }
+
+    /* Esconde o menu normal e prepara a gaveta mobile */
+    #header .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        padding: 15px 0;
+        text-align: center;
+        z-index: 999;
+    }
+
+    /* Exibe o menu quando o botão for clicado (.active) */
+    #header .menu.active {
+        display: flex !important;
+    }
+
+    #header .menu a {
+        padding: 12px 0;
+        display: block;
+        border-bottom: 1px solid #f1f5f9;
+        font-weight: 600;
+    }
+
+    /* Impede que o nome da logo quebre linha */
+    .logo {
+        white-space: nowrap !important;
+    }
+}
