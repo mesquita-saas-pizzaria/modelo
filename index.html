@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Pizza</title>
+    <meta name="description" content="Landing Page Premium para pequenos comércios.">
+    <meta name="author" content="Mesquita SAAS">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container">
+            <a href="#" class="logo" id="logo"></a>
+            <nav class="menu" id="menu"></nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="hero">
+            <div id="hero-container"></div>
+        </section>
+<!-- PROMOÇÕES -->
+        <section id="promocoes" style="padding: 60px 20px; background-color: #fff9f9;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h2 style="font-size: 2.2rem; color: #1F2937; margin-top: 10px;">Promoções da Semana</h2>
+                    <p style="color: #6B7280; font-size: 1rem;">Aproveite nossos descontos exclusivos por tempo limitado.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #fee2e2; display: flex; flex-direction: column;">
+                        <div style="position: relative;">
+                            <span style="position: absolute; top: 12px; right: 12px; background: #EE3947; color: white; padding: 5px 10px; border-radius: 6px; font-weight: 700; font-size: 0.9rem;">20% OFF</span>
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" alt="Combo Família" style="width: 100%; height: 200px; object-fit: cover;">
+                        </div>
+                        <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <h3 style="font-size: 1.3rem; color: #1F2937; margin-bottom: 8px;">Combo Família (Pizza Grande + Refri 2L)</h3>
+                            <p style="color: #6B7280; font-size: 0.95rem; margin-bottom: 15px; flex-grow: 1;">Escolha qualquer sabor tradicional + Guaraná ou Coca-Cola bem gelado.</p>
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+                                <div>
+                                    <span style="text-decoration: line-through; color: #9CA3AF; font-size: 0.9rem; display: block;">R$ 65,00</span>
+                                    <span style="color: #EE3947; font-size: 1.3rem; font-weight: 800;">R$ 52,00</span>
+                                </div>
+                                <button class="btn-primary" onclick="abrirModalPromocao('Combo Família (Pizza Grande + Refri 2L)', 52.00, 'Escolha qualquer sabor tradicional + Guaraná ou Coca-Cola bem gelado.')" style="padding: 8px 16px; font-size: 0.9rem;">Pedir Combo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARDÁPIO -->
+        <section id="products" style="padding: 30px 20px 60px 20px;">
+            <div class="container">
+                <h2 class="section-title" style="margin-top: 10; padding-top: 0;">Nosso Cardápio</h2>
+                
+                <!-- PESQUISA -->
+                <div class="search-box">
+                    <input type="text" id="search-product" placeholder="🔍 Pesquise uma pizza ou ingrediente...">
+                    <span id="contador-produtos" style="display: block; margin-top: 5px; font-size: 0.9rem; color: #666;"></span>
+                </div>
+
+                <!-- FILTROS -->
+                <div id="products-filters"></div>
+            </div>
+
+            <!-- GRID -->
+            <div id="products-container"></div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" style="padding: 60px 20px; background-color: #f9fafb;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h2 style="font-size: 2.2rem; color: #1F2937; margin-top: 10px;">Entre em Contato</h2>
+                    <p style="color: #6B7280; font-size: 1rem;">Estamos prontos para atender você com rapidez e carinho.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; align-items: start;">
+                    
+                    <!-- Coluna 1: Endereço e Mapa -->
+                    <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                            <span style="font-size: 1.5rem; color: #EE3947;">📍</span>
+                            <h3 style="font-size: 1.2rem; color: #1F2937; margin: 0;">Endereço</h3>
+                        </div>
+                        <p style="color: #6B7280; font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px;">
+                            Rua das Pizzas, 123 - Centro<br>Sua Cidade / SP
+                        </p>
+                        <!-- Mapa incorporado do Google Maps -->
+                        <div style="width: 100%; height: 200px; border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb;">
+                            <iframe width="100%" height="100%" style="border:0;" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.5!2d-45.9!3d-21.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDI0JzAwLjAiUyA0NcKwNTQnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Coluna 2: Horários e Status (Aberto/Fechado) -->
+                    <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <span style="font-size: 1.5rem; color: #EE3947;">⏰</span>
+                                <h3 style="font-size: 1.2rem; color: #1F2937; margin: 0;">Horário de Funcionamento</h3>
+                            </div>
+                            <!-- Indicador estilo Google (Aberto/Fechado) -->
+                            <span id="status-funcionamento" style="background-color: #dcfce7; color: #15803d; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">
+                                <span style="width: 8px; height: 8px; background-color: #22c55e; border-radius: 50%; display: inline-block;"></span> Aberto agora
+                            </span>
+                        </div>
+                        <ul style="color: #6B7280; font-size: 0.95rem; line-height: 1.8; padding-left: 20px; margin: 0;">
+                            <li><strong>Terça a Quinta:</strong> 18:00 às 23:00</li>
+                            <li><strong>Sexta e Sábado:</strong> 18:00 às 00:00</li>
+                            <li><strong>Domingo:</strong> 18:00 às 23:30</li>
+                            <li><strong>Segunda-feira:</strong> Fechado</li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 3: Atendimento WhatsApp -->
+                    <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); text-align: center; display: flex; flex-direction: column; justify-content: center; height: 100%;">
+                        <div style="font-size: 2.5rem; color: #22C55E; margin-bottom: 10px;">💬</div>
+                        <h3 style="font-size: 1.2rem; color: #1F2937; margin-bottom: 10px;">Atendimento Direto</h3>
+                        <p style="color: #6B7280; font-size: 0.95rem; margin-bottom: 20px;">Faça seu pedido ou tire dúvidas direto pelo WhatsApp com nossa equipe.</p>
+                        <a href="https://wa.me/5535999999999" target="_blank" style="display: inline-block; background-color: #22C55E; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; text-transform: uppercase;">Chamar no WhatsApp</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; 2026 Bella Pizza - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DE PEDIDO -->
+    <div id="modal-pedido" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; justify-content: center; align-items: center;">
+        <div style="background: white; width: 100%; max-width: 500px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.3); position: relative; max-height: 90vh; display: flex; flex-direction: column;">
+            
+            <!-- CABEÇALHO DO MODAL -->
+            <div style="padding: 15px 20px; background: #EE3947; color: white; display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="margin: 0; font-size: 1.2rem;">Monte o seu pedido</h3>
+                <button id="fechar-modal" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; font-weight: bold;">&times;</button>
+            </div>
+
+            <!-- CONTEÚDO DINÂMICO (Preenchido pelo JS) -->
+            <div id="modal-corpo-conteudo" style="padding: 20px; overflow-y: auto; flex: 1;">
+                <!-- O formulário de montagem entra aqui -->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

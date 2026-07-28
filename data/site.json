@@ -1,0 +1,118 @@
+{
+  "empresa": {
+    "nome": "Bella Pizza",
+    "whatsapp": "5535999999999",
+    "instagram": "https://instagram.com/bellapizza",
+    "facebook": "https://facebook.com/bellapizza"
+  },
+  "menu": [
+    { "texto": "Início", "link": "#" },
+    { "texto": "Promoções", "link": "#promocoes" },
+    { "texto": "Cardápio", "link": "#products" },
+    { "texto": "Contato", "link": "#contato" }
+  ],
+  "hero": {
+    "badge": "Feita no forno a lenha",
+    "titulo": "Sabor e Tradição em Cada Pedaço",
+    "descricao": "Peça agora as melhores pizzas artesanais da região com entrega rápida e ingredientes selecionados.",
+    "botaoPrincipal": "Ver Cardápio",
+    "botaoSecundario": "",
+    "imagem": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80"
+  },
+  "cardapio": [
+    {
+      "id": 1,
+      "nome": "Marguerita",
+      "categoria": "Tradicionais",
+      "preco": 37.90,
+      "descricao": "Molho de tomate artesanal, mussarela, rodelas de tomate fresco e manjericão.",
+      "destaque": true,
+      "imagem": "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 2,
+      "nome": "Calabresa",
+      "categoria": "Tradicionais",
+      "preco": 39.90,
+      "descricao": "Molho de tomate artesanal, mussarela, calabresa fatiada e cebola.",
+      "destaque": false,
+      "imagem": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 3,
+      "nome": "Frango com Catupiry",
+      "categoria": "Especiais",
+      "preco": 47.90,
+      "descricao": "Molho de tomate artesanal, mussarela, frango desfiado temperado e catupiry original.",
+      "destaque": true,
+      "imagem": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 4,
+      "nome": "Quatro Queijos",
+      "categoria": "Especiais",
+      "preco": 49.90,
+      "descricao": "Molho de tomate, mussarela, provolone, gorgonzola e catupiry.",
+      "destaque": false,
+      "imagem": "https://images.unsplash.com/photo-1573821663912-569905459b12?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 5,
+      "nome": "Brócolis com Alho",
+      "categoria": "Vegetarianas",
+      "preco": 42.90,
+      "descricao": "Molho de tomate, mussarela, brócolis refogado ao alho e óleo e cobertura de catupiry.",
+      "destaque": false,
+      "imagem": "https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 6,
+      "nome": "Palmito com Champignon",
+      "categoria": "Vegetarianas",
+      "preco": 45.90,
+      "descricao": "Molho de tomate, mussarela, rodelas de palmito macio e champignon fatiado.",
+      "destaque": false,
+      "imagem": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 7,
+      "nome": "Chocolate com Morango",
+      "categoria": "Doces",
+      "preco": 44.90,
+      "descricao": "Deliciosa cobertura de chocolate cremoso ao leite com morangos frescos picados.",
+      "destaque": true,
+      "imagem": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      "id": 8,
+      "nome": "Prestígio",
+      "categoria": "Doces",
+      "preco": 42.90,
+      "descricao": "Camada generosa de chocolate com coco ralado fresco por cima.",
+      "destaque": false,
+      "imagem": "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=400&q=80"
+    }
+  ],
+  "opcoesPedido": {
+    "bordas": [
+      { "nome": "Borda de Catupiry", "preco": 8.00 },
+      { "nome": "Borda de Cheddar", "preco": 8.00 },
+      { "nome": "Borda de Chocolate", "preco": 10.00 }
+    ],
+    "adicionais": [
+      { "nome": "Bacon Extra", "preco": 6.00 },
+      { "nome": "Catupiry Extra", "preco": 6.00 },
+      { "nome": "Milho", "preco": 3.00 },
+      { "nome": "Azeitona", "preco": 3.00 }
+    ],
+    "bebidas": [
+      { "nome": "Coca-Cola 2L", "preco": 14.00 },
+      { "nome": "Guaraná Antártica 2L", "preco": 12.00 },
+      { "nome": "Água Mineral 500ml", "preco": 5.00 }
+    ],
+    "sobremesas": [
+      { "nome": "Pizza Doce de Chocolate com Morango", "preco": 35.00 },
+      { "nome": "Petit Gâteau", "preco": 18.00 }
+    ]
+  }
+}

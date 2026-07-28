@@ -1,0 +1,721 @@
+/* ==========================================
+   SEÇÕES
+========================================== */
+
+section{
+    padding:120px 0;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+#hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:62px;
+    line-height:1.1;
+    margin-bottom:20px;
+    color:var(--color-title);
+}
+
+.hero p{
+    font-size:20px;
+    color:var(--color-text);
+    margin-bottom:40px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-primary{
+    display:inline-block;
+    background:var(--color-primary);
+    color:#fff;
+    padding:16px 28px;
+    border-radius:999px;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    display:inline-block;
+    border:2px solid var(--color-primary);
+    color:var(--color-primary);
+    padding:16px 28px;
+    border-radius:999px;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-secondary:hover{
+    transform:translateY(-3px);
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:30px;
+    box-shadow:0 40px 80px rgba(0,0,0,.15);
+}
+
+/* ==========================================
+   BADGE
+========================================== */
+
+.badge{
+    display:inline-block;
+    background:#FFE9B3;
+    color:#8A5A00;
+    padding:10px 18px;
+    border-radius:999px;
+    font-size:14px;
+    margin-bottom:24px;
+    font-weight:600;
+}
+
+/* ==========================================
+   CARDÁPIO
+========================================== */
+
+#products{
+    background:#fafafa;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin:60px 0;
+    color:var(--color-title);
+}
+
+/* ==========================================
+   FILTROS
+========================================== */
+
+.filters{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:60px;
+
+}
+
+/* ==========================================
+   PESQUISA
+========================================== */
+
+.search-box{
+
+    width:100%;
+    max-width:520px;
+
+    margin:0 auto 24px;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    background:#fff;
+
+    border-radius:999px;
+
+    padding:16px 24px;
+
+    border:1px solid rgba(0,0,0,.08);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08),
+        0 2px 8px rgba(0,0,0,.04);
+
+    transition:
+        .3s ease;
+
+}
+
+
+.search-box:focus-within{
+
+    border-color:#e63946;
+
+    box-shadow:
+        0 0 0 4px rgba(230,57,70,.12),
+        0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+.search-box input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    font-size:16px;
+
+    color:#333;
+
+}
+
+
+.search-box input::placeholder{
+
+    color:#999;
+
+    font-size:15px;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    .search-box{
+
+        padding:14px 20px;
+
+        max-width:100%;
+
+    }
+
+
+    .search-box input{
+
+        font-size:15px;
+
+    }
+
+}
+/* ==========================================
+   FILTROS
+========================================== */
+
+.filters{
+
+    ...
+}
+
+.filter-btn{
+
+    border:none;
+
+    background:#fff;
+
+    color:var(--color-title);
+
+    padding:14px 28px;
+
+    border-radius:999px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+
+    transition:.30s;
+
+}
+
+.filter-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:var(--color-primary);
+
+    color:#fff;
+
+}
+
+.filter-btn.active{
+
+    background:var(--color-primary);
+
+    color:#fff;
+
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.grid-pizzas{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,340px);
+
+    justify-content:center;
+
+    gap:30px;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.card-pizza{
+
+    display:flex;
+
+    flex-direction:column;
+
+    width:340px;
+
+    min-height:560px;
+
+    background:#fff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.30s;
+
+}
+
+.card-pizza:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 22px 45px rgba(0,0,0,.12);
+
+}
+
+.card-pizza img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    flex-shrink:0;
+
+}
+
+/* ==========================================
+   CONTEÚDO DO CARD
+========================================== */
+
+.pizza-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+    padding:28px;
+
+}
+
+/* ==========================================
+   SELO
+========================================== */
+
+.tag-destaque{
+
+    display:inline-block;
+
+    align-self:flex-start;
+
+    background:#FFE9B3;
+
+    color:#8A5A00;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================
+   TÍTULO
+========================================== */
+
+.pizza-info h3{
+
+    font-size:28px;
+
+    color:var(--color-title);
+
+    line-height:1.3;
+
+    min-height:72px;
+
+    margin-bottom:12px;
+
+}
+
+/* ==========================================
+   DESCRIÇÃO
+========================================== */
+
+.pizza-info p{
+
+    color:var(--color-text);
+
+    line-height:1.6;
+
+    min-height:78px;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================
+   PREÇO
+========================================== */
+
+.pizza-info strong{
+
+    font-size:32px;
+
+    color:var(--color-primary);
+
+    margin-bottom:22px;
+
+}
+
+/* ==========================================
+   BOTÃO
+========================================== */
+
+.pizza-info .btn-primary{
+
+    width:100%;
+
+    margin-top:auto;
+
+    text-align:center;
+
+}
+
+/* Sprint 0.9 — Favoritos */
+.card-pizza{
+    position: relative;
+}
+
+.btn-favorito{
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,.95);
+    box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.btn-favorito:hover{
+    transform: scale(1.08);
+    box-shadow: 0 8px 22px rgba(0,0,0,.22);
+}
+
+.btn-favorito:active{
+    transform: scale(.92);
+}
+
+.btn-favorito.ativo{
+    animation: popHeart .25s ease;
+}
+
+@keyframes popHeart{
+    0%{ transform: scale(.85); }
+    60%{ transform: scale(1.18); }
+    100%{ transform: scale(1); }
+}
+
+/* ==========================================
+   MODAL PEDIDO
+========================================== */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 9999;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0,0,0,0.65);
+
+    backdrop-filter: blur(5px);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+}
+
+
+/* Caixa principal */
+
+.modal-content {
+
+    background: #ffffff;
+
+    width: 100%;
+
+    max-width: 480px;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    position: relative;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+
+    animation: modalEntrada 0.35s ease;
+
+}
+
+
+/* Animação */
+
+@keyframes modalEntrada {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-30px) scale(0.95);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* Botão fechar */
+
+.modal-close {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: #555;
+
+    transition: .3s;
+
+}
+
+
+.modal-close:hover {
+
+    color: #e63946;
+
+}
+
+
+/* Título */
+
+.modal-content h2 {
+
+    margin-bottom: 20px;
+
+    font-size: 26px;
+
+    color: #222;
+
+}
+
+
+/* Labels */
+
+.modal-content label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-weight: 600;
+
+    color: #333;
+
+}
+
+
+/* Campos */
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+
+    width: 100%;
+
+    padding: 12px 15px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: .3s;
+
+}
+
+
+.modal-content input:focus,
+.modal-content textarea:focus,
+.modal-content select:focus {
+
+    border-color: #ff6b00;
+
+    box-shadow: 0 0 0 3px rgba(255,107,0,0.15);
+
+}
+
+
+/* Textarea */
+
+.modal-content textarea {
+
+    min-height: 100px;
+
+    resize: vertical;
+
+}
+
+
+/* Botão enviar */
+
+.modal-submit {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    border: none;
+
+    background: #ff6b00;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.modal-submit:hover {
+
+    transform: translateY(-2px);
+
+    opacity: .9;
+
+}
+
+
+
+/* Responsivo */
+
+@media(max-width:600px){
+
+
+    .modal-content {
+
+        padding: 25px 20px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .modal-content h2 {
+
+        font-size: 22px;
+
+    }
+
+
+}
