@@ -7,46 +7,38 @@
 /* ==========================================
    HEADER
 ========================================== */
-function renderHeader(dados) {
-    document.getElementById("logo").textContent = dados.empresa.nome;
-    const menu = document.getElementById("menu");
-    menu.innerHTML = "";
+function renderHeader() {
+    const headerElement = document.getElementById('header');
+    if (!headerElement) return;
 
-    dados.menu.forEach(item => {
-        menu.innerHTML += `
-            <a href="${item.link}">
-                ${item.texto}
+    headerElement.innerHTML = `
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <a href="#" class="logo" id="logo" style="white-space: nowrap; font-size: 1.4rem; font-weight: 700; text-decoration: none;">
+                Bella Pizza
             </a>
-        `;
-    });
 
-    // Remove o botão verde "Pedir Agora" do cabeçalho (procurando pela classe ou id)
-    const btnVerdeCabecalho = document.querySelector("header .btn-primary, header a[id*='whatsapp'], header button");
-    if (btnVerdeCabecalho) {
-        btnVerdeCabecalho.remove();
-    }
+            <button id="menu-btn" aria-label="Abrir Menu" style="background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #1F2937; display: none;">
+                &#9776;
+            </button>
 
-    // Cria ou atualiza o container das imagens de redes sociais no topo (tamanho 30x30px, lado a lado)
-    let socialContainer = document.getElementById("header-socials");
-    if (!socialContainer) {
-        socialContainer = document.createElement("div");
-        socialContainer.id = "header-socials";
-        socialContainer.style.cssText = "display: flex; gap: 10px; align-items: center; margin-left: 20px;";
-        
-        const headerContainer = document.querySelector("header .container");
-        if (headerContainer) {
-            headerContainer.appendChild(socialContainer);
-        }
-    }
-
-    socialContainer.innerHTML = `
-        <a href="${dados.empresa.instagram || '#'}" target="_blank" title="Instagram">
-            <img src="assets/icons/icon-instagram.png" alt="Instagram" style="width: 30px; height: 30px; object-fit: contain; display: block;">
-        </a>
-        <a href="${dados.empresa.facebook || '#'}" target="_blank" title="Facebook">
-            <img src="assets/icons/icon-facebook.png" alt="Facebook" style="width: 30px; height: 30px; object-fit: contain; display: block;">
-        </a>
+            <nav class="menu" id="menu">
+                <a href="#hero">Início</a>
+                <a href="#promocoes">Promoções</a>
+                <a href="#products">Cardápio</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
     `;
+
+    // Lógica para abrir/fechar o menu no celular
+    const menuBtn = document.getElementById('menu-btn');
+    const menuNav = document.getElementById('menu');
+
+    if (menuBtn && menuNav) {
+        menuBtn.addEventListener('click', () => {
+            menuNav.classList.toggle('active');
+        });
+    }
 }
 
 /* ==========================================
