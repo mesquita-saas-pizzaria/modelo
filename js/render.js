@@ -56,8 +56,17 @@ function renderHeader() {
     const menuNav = document.getElementById('menu');
 
     if (menuBtn && menuNav) {
+        // Abre ou fecha ao clicar no botão hambúrguer
         menuBtn.addEventListener('click', () => {
             menuNav.classList.toggle('active');
+        });
+
+        // Fecha automaticamente ao clicar em qualquer link do menu no celular
+        const menuLinks = menuNav.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuNav.classList.remove('active');
+            });
         });
     }
 }
