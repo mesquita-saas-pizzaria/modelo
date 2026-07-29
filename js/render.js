@@ -1,12 +1,9 @@
 // ==========================================
 // MESQUITA COMMERCE
 // Arquivo: render.js
-// Versão: 1.6
+// Versão: 1.7
 // ==========================================
 
-/* ==========================================
-   HEADER
-========================================== */
 /* ==========================================
    HEADER
 ========================================== */
@@ -15,19 +12,19 @@ function renderHeader() {
     if (!headerElement) return;
 
     headerElement.innerHTML = `
-        <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 15px 20px;">
+        <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 10px 15px;">
             
-            <a href="#" class="logo" id="logo" style="text-decoration: none;">
-    <img src="assets/logos/logo.png" alt="La Forneria" style="height: 60px; width: auto; object-fit: contain;">
-</a>
+            <a href="#" class="logo" id="logo" style="text-decoration: none; display: flex; align-items: center;">
+                <img src="assets/logos/logo.png" alt="La Forneria" class="logo-img">
+            </a>
 
-            <!-- Ícones para Mobile (entre a logo e o menu sanduíche) -->
-            <div class="social-mobile" style="display: none; align-items: center; gap: 12px;">
+            <!-- Ícones para Mobile (entre a logo e o menu) -->
+            <div class="social-mobile" style="display: none; align-items: center; gap: 8px; margin-left: auto; margin-right: 15px;">
                 <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                    <img src="assets/icons/icon-instagram.png" alt="Instagram" style="width: 24px; height: 24px; object-fit: contain;">
+                    <img src="assets/icons/icon-instagram.png" alt="Instagram" style="width: 22px; height: 22px; object-fit: contain;">
                 </a>
                 <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                    <img src="assets/icons/icon-facebook.png" alt="Facebook" style="width: 24px; height: 24px; object-fit: contain;">
+                    <img src="assets/icons/icon-facebook.png" alt="Facebook" style="width: 22px; height: 22px; object-fit: contain;">
                 </a>
             </div>
 
@@ -55,7 +52,6 @@ function renderHeader() {
         </div>
     `;
 
-    // Lógica para abrir/fechar o menu no celular
     const menuBtn = document.getElementById('menu-btn');
     const menuNav = document.getElementById('menu');
 
@@ -445,6 +441,7 @@ function abrirModalMontagem(pizza, opcoes, whatsappEmpresa) {
         modal.style.display = "none";
     };
 }
+
 function abrirModalPromocao(nome, preco, descricao) {
     const pizzaFicticia = {
         nome: nome,
