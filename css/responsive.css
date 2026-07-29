@@ -1,56 +1,47 @@
-/* AJUSTES PARA CELULAR (Telas menores que 768px) */
+/* AJUSTES RESPONSIVOS PARA CELULAR (Telas até 768px) */
 @media (max-width: 768px) {
-    /* Alinha o cabeçalho e distribui os itens */
     #header .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 15px;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px 15px !important;
+        position: relative;
     }
 
-    /* Centraliza a logo e impede a quebra do texto */
-    .logo {
-        text-align: center;
-        white-space: nowrap; /* Evita que o nome 'Bella Pizza' quebre para a linha de baixo */
-        font-size: 1.4rem;
-        margin: 0 auto;
+    /* Esconde os ícones do desktop no celular */
+    .social-desktop {
+        display: none !important;
     }
 
-    /* Estilo do Menu Hambúrguer (3 traços) */
-    .menu-toggle, #menu-btn {
-        display: block;
-        cursor: pointer;
-        font-size: 1.8rem;
-        background: none;
-        border: none;
-        color: #1F2937;
-        padding: 5px;
+    /* Mostra os ícones sociais no celular (entre a logo e o botão) */
+    .social-mobile {
+        display: flex !important;
+        margin-left: auto;
+        margin-right: 15px;
     }
-}
 
-/* Ajustes para telas menores (Celulares) */
-@media (max-width: 768px) {
-    /* Exibe o botão hambúrguer */
+    /* Exibe o botão de menu sanduíche */
     #menu-btn {
         display: block !important;
     }
 
-    /* Esconde o menu normal e prepara a gaveta mobile */
+    /* Remove a centralização e ajusta o menu em gaveta */
     #header .menu {
-        display: none;
+        display: none !important;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         background-color: #ffffff;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        flex-direction: column;
+        flex-direction: column !important;
+        margin: 0 !important;
         padding: 15px 0;
         text-align: center;
         z-index: 999;
     }
 
-    /* Exibe o menu quando o botão for clicado (.active) */
+    /* Abre o menu apenas quando a classe .active for ativada */
     #header .menu.active {
         display: flex !important;
     }
@@ -59,11 +50,24 @@
         padding: 12px 0;
         display: block;
         border-bottom: 1px solid #f1f5f9;
-        font-weight: 600;
+    }
+}
+
+/* AJUSTES PARA DESKTOP (Telas maiores que 768px) */
+@media (min-width: 769px) {
+    .social-mobile {
+        display: none !important;
     }
 
-    /* Impede que o nome da logo quebre linha */
-    .logo {
-        white-space: nowrap !important;
+    .social-desktop {
+        display: flex !important;
+    }
+
+    #menu-btn {
+        display: none !important;
+    }
+
+    #header .menu {
+        display: flex !important;
     }
 }
