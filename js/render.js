@@ -7,26 +7,51 @@
 /* ==========================================
    HEADER
 ========================================== */
+/* ==========================================
+   HEADER
+========================================== */
 function renderHeader() {
     const headerElement = document.getElementById('header');
     if (!headerElement) return;
 
     headerElement.innerHTML = `
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-            <a href="#" class="logo" id="logo" style="white-space: nowrap; font-size: 1.4rem; font-weight: 700; text-decoration: none;">
-                Bella Pizza
-            </a>
+        <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 15px 20px;">
+            
+            <a href="#" class="logo" id="logo" style="text-decoration: none;">
+    <img src="assets/logos/logo.png" alt="La Forneria" style="height: 60px; width: auto; object-fit: contain;">
+</a>
+
+            <!-- Ícones para Mobile (entre a logo e o menu sanduíche) -->
+            <div class="social-mobile" style="display: none; align-items: center; gap: 12px;">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="assets/icons/icon-instagram.png" alt="Instagram" style="width: 24px; height: 24px; object-fit: contain;">
+                </a>
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <img src="assets/icons/icon-facebook.png" alt="Facebook" style="width: 24px; height: 24px; object-fit: contain;">
+                </a>
+            </div>
+
+            <!-- Menu de navegação (Centralizado no desktop) -->
+            <nav class="menu" id="menu" style="display: flex; gap: 25px; margin: 0 auto;">
+                <a href="#hero" style="text-decoration: none; color: #1F2937; font-weight: 500;">Início</a>
+                <a href="#promocoes" style="text-decoration: none; color: #1F2937; font-weight: 500;">Promoções</a>
+                <a href="#products" style="text-decoration: none; color: #1F2937; font-weight: 500;">Cardápio</a>
+                <a href="#contato" style="text-decoration: none; color: #1F2937; font-weight: 500;">Contato</a>
+            </nav>
+
+            <!-- Ícones para Desktop (Alinhados à direita) -->
+            <div class="social-desktop" style="display: flex; align-items: center; gap: 15px;">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="assets/icons/icon-instagram.png" alt="Instagram" style="width: 24px; height: 24px; object-fit: contain;">
+                </a>
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <img src="assets/icons/icon-facebook.png" alt="Facebook" style="width: 24px; height: 24px; object-fit: contain;">
+                </a>
+            </div>
 
             <button id="menu-btn" aria-label="Abrir Menu" style="background: none; border: none; font-size: 1.8rem; cursor: pointer; color: #1F2937; display: none;">
                 &#9776;
             </button>
-
-            <nav class="menu" id="menu">
-                <a href="#hero">Início</a>
-                <a href="#promocoes">Promoções</a>
-                <a href="#products">Cardápio</a>
-                <a href="#contato">Contato</a>
-            </nav>
         </div>
     `;
 
