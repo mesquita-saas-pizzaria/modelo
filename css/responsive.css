@@ -1,11 +1,22 @@
-/* AJUSTES RESPONSIVOS PARA CELULAR (Telas até 768px) */
+/* ==========================================
+   AJUSTES RESPONSIVOS (responsive.css)
+========================================== */
+
+/* AJUSTES PARA CELULAR (Telas menores que 768px) */
 @media (max-width: 768px) {
     #header .container {
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
-        padding: 10px 15px !important;
+        padding: 8px 12px !important;
         position: relative;
+    }
+
+    /* Trava o tamanho da logo em 40px no celular */
+    .logo-img {
+        height: 40px !important;
+        width: auto !important;
+        object-fit: contain !important;
     }
 
     /* Esconde os ícones do desktop no celular */
@@ -13,19 +24,25 @@
         display: none !important;
     }
 
-    /* Mostra os ícones sociais no celular (entre a logo e o botão) */
+    /* Mostra os ícones sociais no celular entre a logo e o menu */
     .social-mobile {
         display: flex !important;
         margin-left: auto;
-        margin-right: 15px;
+        margin-right: 12px;
     }
 
-    /* Exibe o botão de menu sanduíche */
+    /* Estilo do Menu Hambúrguer (3 traços) */
     #menu-btn {
         display: block !important;
+        cursor: pointer;
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        color: #1F2937;
+        padding: 5px;
     }
 
-    /* Remove a centralização e ajusta o menu em gaveta */
+    /* Esconde o menu por padrão e prepara a gaveta mobile */
     #header .menu {
         display: none !important;
         position: absolute;
@@ -41,7 +58,7 @@
         z-index: 999;
     }
 
-    /* Abre o menu apenas quando a classe .active for ativada */
+    /* Exibe o menu quando o botão for clicado (.active) */
     #header .menu.active {
         display: flex !important;
     }
@@ -50,6 +67,7 @@
         padding: 12px 0;
         display: block;
         border-bottom: 1px solid #f1f5f9;
+        font-weight: 600;
     }
 }
 
@@ -69,5 +87,12 @@
 
     #header .menu {
         display: flex !important;
+    }
+
+    /* Tamanho padrão da logo no Desktop (60px) */
+    .logo-img {
+        height: 60px !important;
+        width: auto !important;
+        object-fit: contain !important;
     }
 }
