@@ -15,7 +15,7 @@ function renderHeader() {
         <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 10px 15px;">
             
             <a href="#" class="logo" id="logo" style="text-decoration: none; display: flex; align-items: center;">
-                <img src="assets/logos/logo.png" alt="La Forneria" class="logo-img">
+                <img src="assets/logos/LogoFictícia.png" alt="Sua Logo aqui!" class="logo-img">
             </a>
 
             <!-- Ícones para Mobile (entre a logo e o menu) -->
