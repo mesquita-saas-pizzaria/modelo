@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Forneria</title>
+    <title>Você aqui!</title>
     <meta name="description" content="Landing Page Premium para pequenos comércios.">
     <meta name="author" content="Mesquita SAAS">
 
@@ -93,10 +93,11 @@
                             <h3 style="font-size: 1.2rem; color: #1F2937; margin: 0;">Endereço</h3>
                         </div>
                         <p style="color: #6B7280; font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px;">
-                            Rua Alterosa, 662 - Jardim Santa Maria<br>Alfenas / MG
+                            R. Alterosa, 662 - Jardim Santa Maria<br>Alfenas / MG
                         </p>
                         <div style="width: 100%; height: 200px; border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb;">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d876.314310957679!2d-45.949198744473755!3d-21.441407618592002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b5f56e1978837b%3A0x6da624d6518cc200!2sLa%20Forneria%20delivery!5e0!3m2!1spt-BR!2sbr!4v1785335514628!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>                        </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.342712417705!2d-45.948557489232684!3d-21.44110608023132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b5f59eb8e83ddd%3A0x594662c15fc3d89f!2sR.%20Alterosa%2C%20662%20-%20Jardim%20Santa%20Maria%2C%20Alfenas%20-%20MG!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
 
                   <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
@@ -137,7 +138,7 @@
 
     <footer id="footer">
         <div class="container">
-            <p>© 2026 Bella Pizza - Todos os direitos reservados.</p>
+            <p>© 2026 - Todos os direitos reservados: Sua empresa aqui</p>
         </div>
     </footer>
 
@@ -164,28 +165,23 @@
     <script>
         function atualizarStatusPizzaria() {
             const agora = new Date();
-            const diaSemana = agora.getDay(); // 0 = Domingo, 1 = Segunda, 2 = Terça...
+            const diaSemana = agora.getDay();
             const minutoAtual = (agora.getHours() * 60) + agora.getMinutes();
 
             let estaAberto = false;
 
-            // Horários em minutos
-            const min18h = 18 * 60;        // 1080 min
-            const min23h = 23 * 60;        // 1380 min
-            const min23h30 = (23 * 60) + 30; // 1410 min
-            const min24h = 24 * 60;        // 1440 min
+            const min18h = 18 * 60;
+            const min23h = 23 * 60;
+            const min23h30 = (23 * 60) + 30;
+            const min24h = 24 * 60;
 
             if (diaSemana >= 2 && diaSemana <= 4) {
-                // Terça a Quinta: 18:00 às 23:00
                 estaAberto = (minutoAtual >= min18h && minutoAtual < min23h);
             } else if (diaSemana === 5 || diaSemana === 6) {
-                // Sexta e Sábado: 18:00 às 00:00
                 estaAberto = (minutoAtual >= min18h && minutoAtual < min24h);
             } else if (diaSemana === 0) {
-                // Domingo: 18:00 às 23:30
                 estaAberto = (minutoAtual >= min18h && minutoAtual < min23h30);
             } else {
-                // Segunda-feira: Fechado
                 estaAberto = false;
             }
 
@@ -208,7 +204,6 @@
             }
         }
 
-        // Executa ao carregar a página
         document.addEventListener('DOMContentLoaded', atualizarStatusPizzaria);
     </script>
 
